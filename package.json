@@ -1,6 +1,6 @@
 {
     "name": "skuas",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "CommandLine tool to create a sails app with some customization.",
     "main": "./lib/index.js",
     "bin": {

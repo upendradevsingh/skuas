@@ -75,7 +75,7 @@ module.exports = function() {
     process.argv.push('--silent');
     scope.generatorType = 'new';
 
-    var src = process.cwd() + '/templates';
+    var src = nodepath.resolve(__dirname, '../templates');
     var dest = process.cwd() + '/' + cliArguments[0];
 
     return sailsgen(scope, {
