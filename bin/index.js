@@ -39,10 +39,10 @@ program
 //
 // Normalize version argument, i.e.
 //
-// $ webcore -v
-// $ webcore -V
-// $ webcore --version
-// $ webcore version
+// $ skuas -v
+// $ skuas -V
+// $ skuas --version
+// $ skuas version
 //
 
 
@@ -59,7 +59,7 @@ program
     .action(program.versionInformation);
 
 
-// $ webcore new <appname>
+// $ skuas new <appname>
 cmd = program.command('new [path_to_new_app]');
 // cmd.option('--dry');
 cmd.option('--base [baseApp]');
@@ -70,28 +70,24 @@ cmd.unknownOption = NOOP;
 cmd.action(require('./new'));
 //cmd.action(require('../node_modules/sails/bin/sails-new'));
 
-cmd = cmd = program.command('update');
-cmd.action(require('./exec'));
-
-
 //
 // Normalize help argument, i.e.
 //
-// $ webcore --help
-// $ webcore help
-// $ webcore
-// $ webcore <unrecognized_cmd>
+// $ skuas --help
+// $ skuas help
+// $ skuas
+// $ skuas <unrecognized_cmd>
 //
 
 
-// $ webcore help (--help synonym)
+// $ skuas help (--help synonym)
 cmd = program.command('help');
 cmd.description('');
 cmd.action(program.usageMinusWildcard);
 
 
 
-// $ webcore <unrecognized_cmd>
+// $ skuas <unrecognized_cmd>
 // Mask the '*' in `help`.
 program
     .command('*')
@@ -104,7 +100,7 @@ program.unknownOption = NOOP;
 
 
 
-// $ webcore
+// $ skuas
 //
 program.parse(process.argv);
 var NO_COMMAND_SPECIFIED = program.args.length === 0;
