@@ -1,0 +1,8 @@
+{
+	"generators": {
+		"modules": {
+			"sails-boilerplate": "sails-boilerplate"
+		}
+	}
+}
+
