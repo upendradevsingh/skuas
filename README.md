@@ -1,4 +1,4 @@
-# webcore
+# skuas
 An sails-based Node.js web application bootstrapping module.
 
 #Usage
